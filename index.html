@@ -1,371 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- Favicon Link -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Poppins Font Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Custom JS -->
     <script defer src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahmed Abbas : Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Desktop-Navbar -->
-    <nav class="desktop-navbar ">
-        <div class="logo">
-            <span><img src="assets/smaller.png" alt="Code" class="img-fluid"></span>
-            <span>Ahmed Abbas</span>
-            <span><img src="assets/slash.png" alt="Code" class="img-fluid"></span>
-            <span><img src="assets/greater.png" alt="Code" class="img-fluid"></span>
-        </div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+    <nav class="desktop-navbar">
+      <div class="logo">
+        <span
+          ><img src="assets/smaller.png" alt="Code" class="img-fluid"
+        /></span>
+        <span>Ahmed Abbas</span>
+        <span><img src="assets/slash.png" alt="Code" class="img-fluid" /></span>
+        <span
+          ><img src="assets/greater.png" alt="Code" class="img-fluid"
+        /></span>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
     <!-- Hamburger-Menu -->
     <nav class="hamburger-nav">
-        <div class="logo">
-            <span><img src="assets/smaller.png" alt="Code" class="img-fluid"></span>
-            <span>Ahmed Abbas</span>
-            <span><img src="assets/slash.png" alt="Code" class="img-fluid"></span>
-            <span><img src="assets/greater.png" alt="Code" class="img-fluid"></span>
+      <div class="logo">
+        <span
+          ><img src="assets/smaller.png" alt="Code" class="img-fluid"
+        /></span>
+        <span>Ahmed Abbas</span>
+        <span><img src="assets/slash.png" alt="Code" class="img-fluid" /></span>
+        <span
+          ><img src="assets/greater.png" alt="Code" class="img-fluid"
+        /></span>
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
+      </div>
     </nav>
     <!-- Sections -->
-    <section class="section-container d-flex align-items-center justify-content-center flex-column gap-md-5 gap-0">
-        <!-- Profile Section -->
-        <section
-            class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-0 gap-3 px-md-0 px-3">
-            <div class="col-md-6 col-12 d-flex align-items-center justify-content-center profile-left">
-                <div class="profile-img">
-                    <img src="assets/Profile.png" alt="Ahmed Abbas" class="img-fluid">
-                </div>
+    <section
+      class="section-container d-flex align-items-center justify-content-center flex-column gap-md-5 gap-0"
+    >
+      <!-- Profile Section -->
+      <section
+        class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-0 gap-3 px-md-0 px-3"
+      >
+        <div
+          class="col-md-6 col-12 d-flex align-items-center justify-content-center profile-left"
+        >
+          <div class="profile-img">
+            <img src="assets/Profile.png" alt="Ahmed Abbas" class="img-fluid" />
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-12 d-flex align-items-center justify-content-center flex-column gap-3 profile-right"
+        >
+          <div class="profile-text text-center d-flex flex-column gap-3">
+            <span>Hello, I'm</span>
+            <h1>Ahmed Abbas</h1>
+            <h2>MERN Stack Developer</h2>
+          </div>
+          <div
+            class="profile-btns text-center d-flex align-items-center justify-content-center gap-3"
+          >
+            <button onclick="location.href='./assets/AHMED-ABBAS-RESUME.pdf'">
+              Download CV
+            </button>
+            <button onclick="location.href='./#contact'">Contact Info</button>
+          </div>
+          <div
+            class="profile-socials text-center d-flex align-items-center justify-content-center gap-3"
+          >
+            <img
+              onclick="window.open('https://www.linkedin.com/in/ahmedabbas7', '_blank')"
+              src="assets/linkedin.png"
+              alt="LinkedIn Profile"
+              class="img-fluid icon"
+            />
+            <img
+              onclick="window.open('https://www.github.com/iAhmedAbbas7')"
+              src="assets/github.png"
+              alt="Github Profile"
+              class="img-fluid icon"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section
+        id="about"
+        class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-5 gap-3 px-md-0 px-3"
+      >
+        <div
+          class="col-12 text-center d-flex align-items-center justify-content-center flex-column"
+        >
+          <span class="section-subtext">Get To Know More</span>
+          <h1 class="section-title">About Me</h1>
+        </div>
+        <div
+          class="col-md-5 col-12 d-flex align-items-center justify-content-center flex-column text-center about-details"
+        >
+          <img
+            src="assets/experience.png"
+            alt="Experience"
+            class="img-fluid icon"
+          />
+          <h3>Experience</h3>
+          <span
+            >1.5 + Year<br />
+            MERN Stack Development</span
+          >
+        </div>
+        <div
+          class="col-md-5 col-12 d-flex align-items-center justify-content-center flex-column text-center about-details"
+        >
+          <img
+            src="assets/education.png"
+            alt="Experience"
+            class="img-fluid icon"
+          />
+          <h3>Education</h3>
+          <span
+            >Bachelor of Computer <br />
+            Science</span
+          >
+        </div>
+        <div class="col-md-10 col-11 text-md-start text-center pt-md-0 pt-3">
+          <p class="about-text">
+            I am a dedicated and detail-oriented Frontend Developer with
+            extensive expertise in HTML, CSS, JavaScript, and a variety of
+            modern frameworks and libraries including Bootstrap, Material UI,
+            Tailwind CSS, and React.js. My technical skill set is complemented
+            by a solid understanding of version control systems, particularly
+            Git and GitHub, enabling efficient collaboration and code
+            management. I thrive in team environments where I can contribute to
+            dynamic projects and bring innovative designs to life. Known for my
+            strong work ethic and commitment to continuous improvement, I am
+            passionate about creating responsive, user-friendly web applications
+            that enhance user experiences and drive business success.
+          </p>
+        </div>
+      </section>
+      <!-- Experience Section -->
+      <section
+        id="experience"
+        class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-5 gap-3 px-md-0 px-3"
+      >
+        <!-- Heading -->
+        <div
+          class="col-12 text-center d-flex align-items-center justify-content-center flex-column"
+        >
+          <span class="section-subtext">Explore My</span>
+          <h1 class="section-title">Experience</h1>
+        </div>
+        <!-- Experience Container -->
+        <div class="col-md-11 col-12 article-container">
+          <!-- HTML -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>HTML</h3>
+              <span>Experienced</span>
             </div>
-            <div
-                class="col-md-6 col-12 d-flex align-items-center justify-content-center flex-column gap-3 profile-right">
-                <div class="profile-text text-center d-flex flex-column gap-3">
-                    <span>Hello, I'm</span>
-                    <h1>Ahmed Abbas</h1>
-                    <h2>Frontend Developer</h2>
-                </div>
-                <div class="profile-btns text-center d-flex align-items-center justify-content-center gap-3">
-                    <button onclick="location.href='./assets/AHMED-ABBAS-RESUME.pdf'">
-                        Download CV
-                    </button>
-                    <button onclick="location.href='./#contact'">
-                        Contact Info
-                    </button>
-                </div>
-                <div class="profile-socials text-center d-flex align-items-center justify-content-center gap-3">
-                    <img onclick="window.open('https://www.linkedin.com/in/ahmedabbas7', '_blank')"
-                        src="assets/linkedin.png" alt="LinkedIn Profile" class="img-fluid icon">
-                    <img onclick="window.open('https://www.github.com/iAhmedAbbas7')" src="assets/github.png"
-                        alt="Github Profile" class="img-fluid icon">
-                </div>
+          </article>
+          <!-- CSS -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>CSS</h3>
+              <span>Experienced</span>
             </div>
-        </section>
-        <!-- About Section -->
-        <section id="about"
-            class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-5 gap-3 px-md-0 px-3">
-            <div class="col-12 text-center d-flex align-items-center justify-content-center flex-column">
-                <span class="section-subtext">Get To Know More</span>
-                <h1 class="section-title">About Me</h1>
+          </article>
+          <!-- JavaScript -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>JavaScript</h3>
+              <span>Experienced</span>
             </div>
-            <div
-                class="col-md-5 col-12 d-flex align-items-center justify-content-center flex-column text-center about-details">
-                <img src="assets/experience.png" alt="Experience" class="img-fluid icon">
-                <h3>Experience</h3>
-                <span>6 + Months <br> Frontend Development</span>
+          </article>
+          <!-- Bootstrap -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Bootstrap</h3>
+              <span>Experienced</span>
             </div>
-            <div
-                class="col-md-5 col-12 d-flex align-items-center justify-content-center flex-column text-center about-details">
-                <img src="assets/education.png" alt="Experience" class="img-fluid icon">
-                <h3>Education</h3>
-                <span>Bachelor of Science <br> Biotechnology</span>
+          </article>
+          <!-- Material UI -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Material UI</h3>
+              <span>Experienced</span>
             </div>
-            <div class="col-md-10 col-11 text-md-start text-center pt-md-0 pt-3">
-                <p class="about-text">I am a dedicated and detail-oriented Frontend Developer with extensive expertise
-                    in HTML, CSS,
-                    JavaScript, and a variety
-                    of modern frameworks and libraries including Bootstrap, Material UI, Tailwind CSS, and React.js. My
-                    technical skill set
-                    is complemented by a solid understanding of version control systems, particularly Git and GitHub,
-                    enabling efficient
-                    collaboration and code management. I thrive in team environments where I can contribute to dynamic
-                    projects and bring
-                    innovative designs to life. Known for my strong work ethic and commitment to continuous improvement,
-                    I am passionate
-                    about creating responsive, user-friendly web applications that enhance user experiences and drive
-                    business success.</p>
+          </article>
+          <!-- Tailwind CSS -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Tailwind CSS</h3>
+              <span>Experienced</span>
             </div>
-        </section>
-        <!-- Experience Section -->
-        <section id="experience"
-            class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-5 gap-3 px-md-0 px-3">
-            <div class="col-12 text-center d-flex align-items-center justify-content-center flex-column">
-                <span class="section-subtext">Explore My</span>
-                <h1 class="section-title">Experience</h1>
+          </article>
+          <!-- React JS -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>React JS</h3>
+              <span>Experienced</span>
             </div>
-            <div class="col-md-11 col-12 article-container">
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>HTML</h3>
-                        <span>Experienced</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>CSS</h3>
-                        <span>Experienced</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>JavaScript</h3>
-                        <span>Intermediate</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>Bootstrap</h3>
-                        <span>Experienced</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>Material UI</h3>
-                        <span>Experienced</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>Tailwind CSS</h3>
-                        <span>Experienced</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>React JS</h3>
-                        <span>Intermediate</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>Git</h3>
-                        <span>Intermediate</span>
-                    </div>
-                </article>
-                <article class="d-flex align-items-start justify-content-center gap-3">
-                    <img src="assets/checkmark.png" alt="Skills" class="img-fluid icon">
-                    <div>
-                        <h3>Github</h3>
-                        <span>Intermediate</span>
-                    </div>
-                </article>
+          </article>
+          <!-- Node JS -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Node JS</h3>
+              <span>Experienced</span>
             </div>
-        </section>
-        <!-- Projects Section -->
-        <section id="projects"
-            class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-5 gap-3 px-md-0 px-3">
-            <div class="col-12 text-center d-flex align-items-center justify-content-center flex-column">
-                <span class="section-subtext">Browse My Recent</span>
-                <h1 class="section-title">Projects</h1>
+          </article>
+          <!-- Express JS -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Express JS</h3>
+              <span>Experienced</span>
             </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/brainwave.svg" alt="Brainwave" class="img-fluid project-img">
-                <h3>Brainwave</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button onclick="window.open('https://github.com/iAhmedAbbas7/brainwave.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/brainwave/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
+          </article>
+          <!-- Mongo DB -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Mongo DB</h3>
+              <span>Experienced</span>
             </div>
-            <div class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/youtube.png" alt="YouTube" class="img-fluid project-img">
-                <h3>YouTube</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button onclick="window.open('https://github.com/iAhmedAbbas7/youtube-clone.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/youtube-clone/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
+          </article>
+          <!-- Git -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Git</h3>
+              <span>Intermediate</span>
             </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/webservices.png" alt="Web Services" class="img-fluid project-img">
-                <h3>Web Services</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button onclick="window.open('https://github.com/iAhmedAbbas7/webservices.github.io.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/webservices.github.io/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
+          </article>
+          <!-- Github -->
+          <article
+            class="d-flex align-items-start justify-content-center gap-3"
+          >
+            <img
+              src="assets/checkmark.png"
+              alt="Skills"
+              class="img-fluid icon"
+            />
+            <div>
+              <h3>Github</h3>
+              <span>Intermediate</span>
             </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/mygoodmovers.png" alt="My Good Movers" class="img-fluid project-img">
-                <h3>My Good Movers</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button
-                        onclick="window.open('https://github.com/iAhmedAbbas7/mygoodmovers.github.io.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/mygoodmovers.github.io/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/footballmastery.png" alt="Football Mastery" class="img-fluid project-img">
-                <h3>Football Mastery</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button
-                        onclick="window.open('https://github.com/iAhmedAbbas7/footballmastery.github.io.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/footballmastery.github.io/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/nike.png" alt="Nike" class="img-fluid project-img">
-                <h3>Nike</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button onclick="window.open('https://github.com/iAhmedAbbas7/nike.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/nike/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/dma.svg" alt="DMA" class="img-fluid project-img">
-                <h3>Digital Marketing Agency</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button
-                        onclick="window.open('https://github.com/iAhmedAbbas7/digitalmarketingagency.github.io.git','_blank')">
-                        Github
-                    </button>
-                    <button
-                        onclick="window.open('https://iahmedabbas7.github.io/digitalmarketingagency.github.io/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/realmadrid.png" alt="Real Madrid" class="img-fluid project-img">
-                <h3>Real Madrid</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button onclick="window.open('https://github.com/iAhmedAbbas7/real-madrid.github.io.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/real-madrid.github.io/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div
-                class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3">
-                <img src="assets/tictactoe.png" alt="Tic Tac Toe" class="img-fluid project-img">
-                <h3>TIC-TAC-TOE Game</h3>
-                <div class="project-btns d-flex align-items-center justify-content-center gap-4">
-                    <button onclick="window.open('https://github.com/iAhmedAbbas7/tic-tac-toe.github.io.git','_blank')">
-                        Github
-                    </button>
-                    <button onclick="window.open('https://iahmedabbas7.github.io/tic-tac-toe.github.io/','_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact"
-            class="col-12 profile d-flex align-items-center justify-content-center flex-wrap pt-5 pb-3 gap-md-5 gap-3 px-md-0 px-3">
-            <div class="col-12 text-center d-flex align-items-center justify-content-center flex-column">
-                <span class="section-subtext">Get In Touch</span>
-                <h1 class="section-title">Contact Me</h1>
-            </div>
-            <div
-                class="col-md-11 col-12 contact-socials d-flex align-items-center justify-content-center gap-3 flex-wrap">
-                <img src="assets/email.png" alt="Email" class="img-fluid icon"
-                    onclick="window.open('https://mailto:iahmedabbas7@gmail.com', '_blank')">
-                <img src="assets/github.png" alt="Github" class="img-fluid icon"
-                    onclick="window.open('https://www.github.com/iAhmedAbbas7', '_blank')">
-                <img src="assets/linkedin.png" alt="LinkedIn" class="img-fluid icon"
-                    onclick="window.open('https://www.linkedin.com/in/ahmedabbas7', '_blank')">
-                <img src="assets/whatsapp.png" alt="WhatsApp" class="img-fluid icon"
-                    onclick="window.open('https://wa.me/923116474871', '_blank')">
-                <img src="assets/instagram.png" alt="Instagram" class="img-fluid icon"
-                    onclick="window.open('https://www.instagram.com/itxahmed7', '_blank')">
-            </div>
-            <div class="col-12 text-center d-flex align-items-center justify-content-center pt-3">
-                <span>CopyRight © 2024 Ahmed Abbas. All Rights Reserved.</span>
-            </div>
-        </section>
+          </article>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="col-12 profile d-flex align-items-center justify-content-center flex-wrap py-5 gap-md-5 gap-3 px-md-0 px-3"
+      >
+        <!-- Heading -->
+        <div
+          class="col-12 text-center d-flex align-items-center justify-content-center flex-column"
+        >
+          <span class="section-subtext">Browse My Recent</span>
+          <h1 class="section-title">Projects</h1>
+        </div>
+        <!-- Techify Repairs -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/techify-repairs.png"
+            alt="Techify Repairs"
+            class="img-fluid project-img"
+          />
+          <h3>Techify Repairs</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/techify-repairs-frontend.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://techify-repairs-frontend.onrender.com','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- Brainwave -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/brainwave.svg"
+            alt="Brainwave"
+            class="img-fluid project-img"
+          />
+          <h3>Brainwave</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/brainwave.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/brainwave/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- YouTube -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/youtube.png"
+            alt="YouTube"
+            class="img-fluid project-img"
+          />
+          <h3>YouTube</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/youtube-clone.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/youtube-clone/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- Web Services -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/webservices.png"
+            alt="Web Services"
+            class="img-fluid project-img"
+          />
+          <h3>Web Services</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/webservices.github.io.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/webservices.github.io/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- My Good Movers -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/mygoodmovers.png"
+            alt="My Good Movers"
+            class="img-fluid project-img"
+          />
+          <h3>My Good Movers</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/mygoodmovers.github.io.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/mygoodmovers.github.io/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- Football Mastery -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/footballmastery.png"
+            alt="Football Mastery"
+            class="img-fluid project-img"
+          />
+          <h3>Football Mastery</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/footballmastery.github.io.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/footballmastery.github.io/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- Nike -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img src="assets/nike.png" alt="Nike" class="img-fluid project-img" />
+          <h3>Nike</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/nike.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/nike/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- Digital Marketing Agency -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img src="assets/dma.svg" alt="DMA" class="img-fluid project-img" />
+          <h3>Digital Marketing Agency</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/digitalmarketingagency.github.io.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/digitalmarketingagency.github.io/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- Real Madrid -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/realmadrid.png"
+            alt="Real Madrid"
+            class="img-fluid project-img"
+          />
+          <h3>Real Madrid</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/real-madrid.github.io.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/real-madrid.github.io/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!-- TIC-TAC-TOE -->
+        <div
+          class="col-md-5 col-12 project-container d-flex align-items-center justify-content-center flex-column gap-3"
+        >
+          <img
+            src="assets/tictactoe.png"
+            alt="Tic Tac Toe"
+            class="img-fluid project-img"
+          />
+          <h3>TIC-TAC-TOE Game</h3>
+          <div
+            class="project-btns d-flex align-items-center justify-content-center gap-4"
+          >
+            <button
+              onclick="window.open('https://github.com/iAhmedAbbas7/tic-tac-toe.github.io.git','_blank')"
+            >
+              Github
+            </button>
+            <button
+              onclick="window.open('https://iahmedabbas7.github.io/tic-tac-toe.github.io/','_blank')"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="col-12 profile d-flex align-items-center justify-content-center flex-wrap pt-5 pb-3 gap-md-5 gap-3 px-md-0 px-3"
+      >
+        <div
+          class="col-12 text-center d-flex align-items-center justify-content-center flex-column"
+        >
+          <span class="section-subtext">Get In Touch</span>
+          <h1 class="section-title">Contact Me</h1>
+        </div>
+        <div
+          class="col-md-11 col-12 contact-socials d-flex align-items-center justify-content-center gap-3 flex-wrap"
+        >
+          <img
+            src="assets/email.png"
+            alt="Email"
+            class="img-fluid icon"
+            onclick="window.open('https://mailto:iahmedabbas7@gmail.com', '_blank')"
+          />
+          <img
+            src="assets/github.png"
+            alt="Github"
+            class="img-fluid icon"
+            onclick="window.open('https://www.github.com/iAhmedAbbas7', '_blank')"
+          />
+          <img
+            src="assets/linkedin.png"
+            alt="LinkedIn"
+            class="img-fluid icon"
+            onclick="window.open('https://www.linkedin.com/in/ahmedabbas7', '_blank')"
+          />
+          <img
+            src="assets/whatsapp.png"
+            alt="WhatsApp"
+            class="img-fluid icon"
+            onclick="window.open('https://wa.me/923116474871', '_blank')"
+          />
+          <img
+            src="assets/instagram.png"
+            alt="Instagram"
+            class="img-fluid icon"
+            onclick="window.open('https://www.instagram.com/itxahmed7', '_blank')"
+          />
+        </div>
+        <div
+          class="col-12 text-center d-flex align-items-center justify-content-center pt-3"
+        >
+          <span
+            >CopyRight ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Ahmed Abbas. All Rights Reserved.</span
+          >
+        </div>
+      </section>
     </section>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
